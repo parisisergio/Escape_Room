@@ -8,9 +8,9 @@
 
 - Download the repo with "git clone https://github.com/parisisergio/Escape_Room.git" on your command line. Make sure to do "cd Escape_Room" before continuing.
 
-- Check if you have python installed by typing python on your command line. Use exit() to exit the python ecosystem. If you have any errors, install python on your computer.
+- Check if you have python installed by typing python on your windows command line (not git bash command line). Use exit() to exit the python ecosystem. If you have any errors, install python on your computer (directly from the python official documentation, not from microsoft store). 
 
-- Run "python get-pip.py" on your command line to install pip install for installing packages.
+- Check after installing python if you have *pip* by running "pip --version". If it doesn't work, run "python get-pip.py" on your command line to install pip install for installing packages. Make sure to be on Escape_Room because the file is there. 
 
 - Run "pip install emoji" and "pip install pygame"
 
@@ -47,7 +47,7 @@ Read the game narratives and technical requirements carefully. Plan how you will
 
 ### Game Map
 
-![Game Map](escape-room-plan.jpg)
+![Game Map](spaceship.jpg)
 
 ### Game Narratives
 
