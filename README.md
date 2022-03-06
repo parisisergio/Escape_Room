@@ -6,34 +6,38 @@
 
 ### For windows users:
 
-- Download the repo with "git clone https://github.com/parisisergio/Escape_Room.git" on your command line. Make sure to do "cd Escape_Room" before continuing.
+- Download the repo with "git clone https://github.com/parisisergio/Escape_Room.git" on your command line. Make sure to do "cd Escape_Room/your-code" before continuing.
 
 - Check if you have python installed by typing python on your windows command line (not git bash command line). Use exit() to exit the python ecosystem. If you have any errors, install python on your computer (directly from the python official documentation, not from microsoft store). 
 
-- Check after installing python if you have *pip* by running "pip --version". If it doesn't work, run "python get-pip.py" on your command line to install pip install for installing packages. Make sure to be on Escape_Room because the file is there. 
+- Check after installing python if you have *pip* by running "pip --version". If it doesn't work, run "python get-pip.py" on your command (find it in Escape_Room) line to install pip install for installing packages. 
 
 - Run "pip install emoji" and "pip install pygame"
 
 - Do "cd Escape_Room/your-code" and run "python main.py"
 
-- If you have a error  similar to "Failed loading libmpg123-0.dll", follow the steps to fix it in this stack overflow question: https://stackoverflow.com/questions/59623969/pygame-error-failed-loading-libmpg123-dll-attempt-to-access-invalid-address - You have the libmpg123-0.dll file in your Escape_Room folder for you to move it. Run "pip unistall pygame" and "pip install pygame". Close everything and restart from step 4.
-
 - Enjoy!
 
+- Make sure you've installed everything con the same path before launching the game. If you see that some imported module throws errors like if you've never installed (but you actually did) it might be because you are installing them on different paths from the one on the game. Check this https://stackoverflow.com/questions/14295680/unable-to-import-a-module-that-is-definitely-installed 
+
+- If you have a error  similar to "Failed loading libmpg123-0.dll", follow the steps to fix it in this stack overflow question: https://stackoverflow.com/questions/59623969/pygame-error-failed-loading-libmpg123-dll-attempt-to-access-invalid-address - You have the libmpg123-0.dll file in your Escape_Room folder for you to move it. Run "pip unistall pygame" and "pip install pygame". Close everything and restart from step 4.
 
 ### For mac users:
 
-- Download the repo with "git clone https://github.com/parisisergio/Escape_Room.git" on your command line. Make sure to do "cd Escape_Room" before continuing.
+- Download the repo with "git clone https://github.com/parisisergio/Escape_Room.git" on your command line. Make sure to do "cd Escape_Room/your-code" before continuing.
 
 - Check if you have python installed by typing python3 on your command line. Use exit() to exit the python ecosystem. If you have any errors, install python on your computer.
 
-- Run "python3 get-pip.py" on your command line to install pip install for installing packages.
+- Check after installing python if you have *pip* by running "pip --version". If it doesn't work, run "python get-pip.py" on your command (find it in Escape_Room) line to install pip install for installing packages. 
 
 - Run "pip install emoji" and "pip install pygame"
 
 - Do "cd Escape_Room/your-code" and run "python3 main.py"
 
 - Enjoy!
+
+- Make sure you've installed everything con the same path before launching the game. If you see that some imported module throws errors like if you've never installed (but you actually did) it might be because you are installing them on different paths from the one on the game. Check this https://stackoverflow.com/questions/14295680/unable-to-import-a-module-that-is-definitely-installed 
+
 
 ## Overview
 
