@@ -367,7 +367,7 @@ def start_game():
     Start the game
     """
     mixer.music.load('room1.mp3')
-    mixer.music.set_volume(0.5)
+    mixer.music.set_volume(0.2)
     mixer.music.play(loops=-1)
     print("You are the captain of the spaceship Battlestar and the spaceship is about to collide with an asteroid and it is inevitable. You have to escape in the space shuttle and you have 2 minutes. Don't forget to take everything you need to escape!!!.")
     print(spaceship)
@@ -457,8 +457,8 @@ def examine_item(item_name): ##### gets an input to examine
                         have_key = True ##### turns the state to true if the key opens that door (item)
                 if(have_key):
                     output += "You unlock it with an access card that you have" ##### appends the string value 
-                    sound_effect = mixer.Sound('door.mp3')
-                    sound_effect.set_volume(0.5)
+                    sound_effect = mixer.Sound(item['sound'])
+                    sound_effect.set_volume(0.6)
                     sound_effect.play()
                     next_room = get_next_room_of_door(item, current_room) ##### item is a door - apply get_next_room_of_door function
                 else:
@@ -470,7 +470,7 @@ def examine_item(item_name): ##### gets an input to examine
                     output += "You find " + col.green + item_found["name"] + item_found["emoji"] + col.reset + "." ##### shows the key name
                     if "sound" in item_found:   
                         sound_effect = mixer.Sound(item_found["sound"])
-                        sound_effect.set_volume(0.5)
+                        sound_effect.set_volume(0.6)
                         sound_effect.play()                        
                     #print(f"The collected items & cards are: {[i['name'] for i in game_state['keys_collected']]}")
                     if "msg" in item_found: 
