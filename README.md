@@ -47,7 +47,7 @@ Read the game narratives and technical requirements carefully. Plan how you will
 
 ### Game Map
 
-![Game Map](spaceship.jpg)
+![Game Map](spaceship.png)
 
 ### Game Narratives
 
