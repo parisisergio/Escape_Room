@@ -8,7 +8,7 @@
 
 - Download the repo with "git clone https://github.com/parisisergio/Escape_Room.git" on your command line. Make sure to do "cd Escape_Room/your-code" before continuing.
 
-- Check if you have python installed by typing python on your windows command line (not git bash command line). Use exit() to exit the python ecosystem. If you have any errors, install python on your computer (directly from the python official documentation, not from microsoft store). 
+- Check if you have python installed by typing python on your windows command line (not git bash command line). Check if you have the last version of windows terminal here: https://www.microsoft.com/store/productId/9N0DX20HK701. Use exit() to exit the python ecosystem. If you have any errors, install python on your computer (directly from the python official documentation, not from microsoft store). 
 
 - Check after installing python if you have *pip* by running "pip --version". If it doesn't work, run "python get-pip.py" on your command (find it in Escape_Room) line to install pip install for installing packages. 
 
