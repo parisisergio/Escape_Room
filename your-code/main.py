@@ -2,6 +2,7 @@
 # Run "pip install pygame" in your command line
 import emoji 
 import time
+import pygame
 from pygame import mixer 
 mixer.init()
 mixer.set_num_channels(20)
