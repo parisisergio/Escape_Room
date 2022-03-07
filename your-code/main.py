@@ -1,12 +1,29 @@
-# Run "pip install emoji" in your command line
-# Run "pip install pygame" in your command line
-import emoji 
-import time
-import pygame
-from pygame import mixer 
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+from pygame import mixer
 mixer.init()
 mixer.set_num_channels(20)
 mixer.set_reserved(1)
+
+
+# In[2]:
+
+
+import emoji
+
+
+# In[3]:
+
+
+import time
+
+
+# In[4]:
+
 
 spaceship = '''  
  _                _            _     _   _           _   
@@ -67,8 +84,12 @@ __   __                                               _ _
                               `-------'
 '''
 
+
+# In[5]:
+
+
 #mixer.music.load('room1.mp3')
-#mixer.music.set_volume(0.5)
+#mixer.music.set_volume(0.2)
 #mixer.music.play(loops=-1)
 
 
@@ -339,6 +360,10 @@ INIT_GAME_STATE = {
     "target_room": space
 }
 
+
+# In[6]:
+
+
 #### PLAYLIST NOT FINISHED
 
 ###import random
@@ -367,7 +392,7 @@ def start_game():
     Start the game
     """
     mixer.music.load('room1.mp3')
-    mixer.music.set_volume(0.5)
+    mixer.music.set_volume(0.2)
     mixer.music.play(loops=-1)
     print("You are the captain of the spaceship Battlestar and the spaceship is about to collide with an asteroid and it is inevitable. You have to escape in the space shuttle and you have 2 minutes. Don't forget to take everything you need to escape!!!.")
     print(spaceship)
@@ -390,7 +415,7 @@ def play_room(room):
         mixer.music.stop()
     else:
         print(f"You are now in {room['name']}")##### uses the name value of the game_room dict, this would be something like  game_state["current_room"]["name"]
-        intended_action = input("What would you like to do? Type 'explore' or 'examine' or 'check inventory'?").strip() 
+        intended_action = input("What would you like to do? Type 'explore' , 'examine' , 'check inventory' or 'check map' ?").strip() 
         if intended_action == "explore":
             explore_room(room) ##### shows the items in the room depending on the current room
             play_room(room) ##### restart the process with print "You are now in room" 
@@ -399,8 +424,30 @@ def play_room(room):
         elif intended_action == "check inventory": 
             check_inventory() ##### type a value of the ones specified in explore function
             play_room(room)
+        elif intended_action == "check map":     
+            import pygame
+            pygame.init()
+            w = 2068;
+            h = 1186
+            screen = pygame.display.set_mode((w, h))
+            pygame.display.set_caption('Spaceship Map')
+            TPImage = pygame.image.load("spaceship.png").convert()
+            # coordinates of the image
+            x = 10;
+            y = 20;
+            screen.blit(TPImage, (x, y))
+            # paint screen one time
+            pygame.display.flip()
+            running = True
+            while (running): # loop listening for end of game
+               for event in pygame.event.get():
+                  if event.type == pygame.QUIT:
+                     running = False
+            # loop over, quite pygame
+            pygame.display.quit()      
+            play_room(room)
         else:
-            print("Not sure what you mean. Type 'explore' or 'examine' or 'check inventory'.")
+            print("Not sure what you mean. Type 'explore' , 'examine' , 'check inventory' or 'check map'.")
             play_room(room)
         linebreak()
 
@@ -457,7 +504,7 @@ def examine_item(item_name): ##### gets an input to examine
                         have_key = True ##### turns the state to true if the key opens that door (item)
                 if(have_key):
                     output += "You unlock it with an access card that you have" ##### appends the string value 
-                    sound_effect = mixer.Sound('door.mp3')
+                    sound_effect = mixer.Sound(item["sound"])
                     sound_effect.set_volume(0.5)
                     sound_effect.play()
                     next_room = get_next_room_of_door(item, current_room) ##### item is a door - apply get_next_room_of_door function
@@ -491,20 +538,16 @@ def examine_item(item_name): ##### gets an input to examine
         play_room(current_room) ##### leaves you in the previous room if you say no
 
 
+# In[7]:
+
+
 game_state = INIT_GAME_STATE.copy()
 
 start_game() 
 
-#added an empty target to galactic gps because they are being treated as keys
-# card for laboratory is not showing up on space machine 
-# removed _ from object relations because objects weren't mapped
-# change Laboratory to laboratory
-# change dirt box to dirty box
-# added a better print with list_status
-# added show items collected functionality - checking inventory at the beginning
-# added basic images 
-# added dummy emojis
-# specific emojis
-# specific emojis and messages
-# added colours to texts
-# added sounds to rooms and items
+
+# In[ ]:
+
+
+
+
