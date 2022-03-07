@@ -392,7 +392,7 @@ def start_game():
     Start the game
     """
     mixer.music.load('room1.mp3')
-    mixer.music.set_volume(0.2)
+    mixer.music.set_volume(0.1)
     mixer.music.play(loops=-1)
     print("You are the captain of the spaceship Battlestar and the spaceship is about to collide with an asteroid and it is inevitable. You have to escape in the space shuttle and you have 2 minutes. Don't forget to take everything you need to escape!!!.")
     print(spaceship)
@@ -424,7 +424,8 @@ def play_room(room):
         elif intended_action == "check inventory": 
             check_inventory() ##### type a value of the ones specified in explore function
             play_room(room)
-        elif intended_action == "check map":     
+        elif intended_action == "check map":
+            print( "close map to continue" )
             import pygame
             pygame.init()
             w = 2068;
@@ -538,7 +539,7 @@ def examine_item(item_name): ##### gets an input to examine
         play_room(current_room) ##### leaves you in the previous room if you say no
 
 
-# In[7]:
+# In[ ]:
 
 
 game_state = INIT_GAME_STATE.copy()
