@@ -2,6 +2,8 @@
 
 # Project: Escape Room Python Game
 
+## Watch the game demo here: https://vimeo.com/685458077 
+
 # Before starting! Game pre-requisites
 
 ### For windows users:

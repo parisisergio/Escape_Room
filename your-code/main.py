@@ -1,29 +1,9 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
+import emoji
+import time
 from pygame import mixer
 mixer.init()
 mixer.set_num_channels(20)
 mixer.set_reserved(1)
-
-
-# In[2]:
-
-
-import emoji
-
-
-# In[3]:
-
-
-import time
-
-
-# In[4]:
-
 
 spaceship = '''  
  _                _            _     _   _           _   
@@ -428,8 +408,8 @@ def play_room(room):
             print( "close map to continue" )
             import pygame
             pygame.init()
-            w = 2068;
-            h = 1186
+            w = 970;
+            h = 555;
             screen = pygame.display.set_mode((w, h))
             pygame.display.set_caption('Spaceship Map')
             TPImage = pygame.image.load("spaceship.png").convert()
@@ -538,16 +518,10 @@ def examine_item(item_name): ##### gets an input to examine
     else:
         play_room(current_room) ##### leaves you in the previous room if you say no
 
-
-# In[ ]:
-
-
 game_state = INIT_GAME_STATE.copy()
 
 start_game() 
 
-
-# In[ ]:
 
 
 
